@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  api:
+    build: .
+    environment:
+      DB_URL: mongodb://localhost:27018/pasargad
+  db:
+    image: mongo:4.0-xenial
+    ports:
+      - 27018:27018
+    volumes:
+      - pasargad:/data
+volumes:
+  - pasargad:

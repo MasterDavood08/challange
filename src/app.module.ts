@@ -6,7 +6,7 @@ import { Rectangle, RectangleSchema } from './schemas/rectangle.schema';
 
 @Module({
   imports: [
-    MongooseModule.forRoot('mongodb://localhost/pasargad'),
+    MongooseModule.forRoot(process.env.DB_URL),
     MongooseModule.forFeature([
       { name: Rectangle.name, schema: RectangleSchema },
     ]),
