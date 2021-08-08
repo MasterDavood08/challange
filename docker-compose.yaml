@@ -15,4 +15,4 @@ services:
     volumes:
       - pasargad:/data/db
 volumes:
-  - pasargad:
+  pasargad:
